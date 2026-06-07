@@ -1,0 +1,6 @@
+{
+  "name": "Naincy's Birthday Countdown",
+  "description": "A smart 3D birthday countdown and wishing website for Naincy.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
