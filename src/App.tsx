@@ -58,22 +58,13 @@ function FinalScreen() {
         >
           <div className="absolute -inset-1 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
           <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto rounded-3xl overflow-hidden border-2 border-white/20 bg-slate-800 shadow-2xl flex items-center justify-center">
-            {/* When the user uploads "naincy.jpg" to the public folder, it will appear here */}
+            {/* User provided photo */}
             <img 
-              src="/naincy.jpg" 
+              src="https://www.image2url.com/r2/default/images/1780884639397-c3de4b11-c56b-485b-a171-80ff87f919f9.jpg" 
               alt="Naincy" 
               className="w-full h-full object-cover z-10 relative"
-              onError={(e) => {
-                // Fallback UI if image isn't uploaded yet
-                e.currentTarget.style.display = 'none';
-                e.currentTarget.parentElement?.querySelector('.fallback-ui')?.classList.remove('hidden');
-              }}
+              referrerPolicy="no-referrer"
             />
-            <div className="fallback-ui hidden absolute inset-0 flex-col items-center justify-center text-slate-400 p-6 text-center z-0 bg-slate-900/80 backdrop-blur-sm">
-              <Camera className="w-12 h-12 mb-3 text-slate-500" />
-              <p className="text-sm font-medium">To see your photo here:</p>
-              <p className="text-xs mt-1 text-slate-500">Upload it to the <strong>public</strong> folder and name it <strong>naincy.jpg</strong></p>
-            </div>
           </div>
         </motion.div>
 
